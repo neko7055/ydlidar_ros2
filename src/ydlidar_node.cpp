@@ -14,7 +14,6 @@
 #include <iostream>
 #include <memory>
 #include <sensor_msgs/msg/laser_scan.hpp>
-#include <std_srvs/srv/empty.hpp>
 #include <string>
 #include <vector>
 
