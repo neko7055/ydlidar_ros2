@@ -18,13 +18,12 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
-from launch.actions import LogInfo
 
 import os
 
 
 def generate_launch_description():
-    share_dir = get_package_share_directory('ydlidar_ros2_driver')
+    share_dir = get_package_share_directory('ydlidar_ros2')
     parameter_file = LaunchConfiguration('params_file')
     node_name = 'ydlidar_node'
 
@@ -33,7 +32,7 @@ def generate_launch_description():
                                                share_dir, 'params', 'ydlidar.yaml'),
                                            description='FPath to the ROS2 parameters file to use.')
 
-    driver_node = Node(package='ydlidar_ros2_driver',
+    driver_node = Node(package='ydlidar_ros2',
                        executable='ydlidar_node',
                        name='ydlidar_node',
                        output='screen',

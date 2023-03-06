@@ -57,8 +57,8 @@ ament_target_dependencies(ydlidar_client
 #    ydlidar_node ydlidar_client
 #    DESTINATION lib/${PROJECT_NAME})
 
-#install(DIRECTORY launch params startup config sdk
-#    DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY launch params
+    DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
     find_package(ament_lint_auto REQUIRED)
