@@ -53,9 +53,8 @@ ament_target_dependencies(ydlidar_client
 #---------------------------------------------------------------------------------------
 # Install
 #---------------------------------------------------------------------------------------
-#install(TARGETS
-#    ydlidar_node ydlidar_client
-#    DESTINATION lib/${PROJECT_NAME})
+install(TARGETS ydlidar_node ydlidar_client
+    DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY launch params
     DESTINATION share/${PROJECT_NAME})
